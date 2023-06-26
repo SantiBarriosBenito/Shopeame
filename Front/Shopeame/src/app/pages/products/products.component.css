@@ -1,0 +1,57 @@
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4%;
+    margin: 5px 0;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 20px 0;
+}
+
+img{
+    width: 100%;
+}
+.contenedorimg{
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedortexto{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    
+}
+
+.contenedorbotones{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFC970;
+    margin: 5px 0;
+}
+p{
+    margin: 5px 0;
+}
+h3{
+margin: 7px 0;
+font-size: 30px;
+}
+button{
+    margin: 5px 2px;
+}

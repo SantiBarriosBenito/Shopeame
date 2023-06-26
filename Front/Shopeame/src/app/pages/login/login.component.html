@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="divinput">
+        <label for="email">Email</label>
+        <input id="email"  formControlName="email" type="text"/>
+        <p *ngIf= "(submitted && loginForm?.get('email')?.hasError('required'))">Este campo es requerido</p>
+        <p *ngIf= "(submitted && loginForm?.get('email')?.hasError('pattern'))">No cumple el formato de email</p>
+    </div>
+    <div class="divinput">
+        <label for="password">Contraseña</label>
+        <input id="password"  formControlName="password" type="password"/>
+        <p *ngIf= "(submitted && loginForm?.get('password')?.hasError('required'))">Este campo es requerido</p>
+        <p *ngIf= "(submitted && loginForm?.get('password')?.hasError('pattern'))">No cumple el formato de password</p>
+
+    </div>
+    <button>Iniciar sesión</button>
+
+</form>
+

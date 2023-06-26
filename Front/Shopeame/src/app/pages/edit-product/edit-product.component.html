@@ -1,0 +1,40 @@
+<section>
+    <form [formGroup]="productForm" (ngSubmit)="editProduct()">
+        <div class="divinput">
+            <label for="name">Nombre del producto</label>
+            <input id="name"  formControlName="name" type="text"/>
+            <p *ngIf= "(submitted && productForm?.get('name')?.hasError('required'))">Este campo es requerido</p>
+        </div>
+        <div class="divinput">
+            <label for="image">Imagen</label>
+            <input id="image" formControlName="image" type="text"/>
+            <p *ngIf= "(submitted && productForm?.get('image')?.hasError('required'))">Este campo es requerido</p>
+        </div>
+        <div class="divinput">
+            <label for="price">Precio</label>
+            <input id="price"  formControlName="price" type="text"/>
+            <p *ngIf= "(submitted && productForm?.get('price')?.hasError('required'))">Este campo es requerido</p>
+        </div>
+        <div class="divinput">
+            <label for="description">Descripción</label>
+            <input id="description"  formControlName="description" type="text"/>
+            <p *ngIf= "(submitted && productForm?.get('description')?.hasError('required'))">Este campo es requerido</p>
+        </div>
+        
+        <button>Editar producto</button>
+    </form>
+    
+    <div class="product" *ngIf="product">
+        <article>
+            <div class="contenedorimg">
+                <img src="{{product.image}}" alt="{{product.name}}" />
+            </div>
+            <div class="contenedortexto">
+                <h3>Nombre: {{product.name}}</h3>
+                <p class="price">Precio: {{product.price}} €</p>
+                <p class="description">Descripción: {{product.description}}</p>
+                
+            </div>
+        </article>
+    </div>
+    </section>

@@ -1,0 +1,15 @@
+<section >
+    <article *ngFor="let product of productList" routerLink="/products/{{product.id}}">
+        <div class="contenedorimg" >
+            <img src="{{product?.image}}" alt="{{product.name}}" >
+        </div>
+        <div class="contenedortexto">
+            <h3>{{product?.name}}</h3>
+            <p class="price">{{product?.price}} €</p>
+            <p class="description">{{product?.description}}</p>
+        </div>
+        
+    </article>
+    
+</section>
+
